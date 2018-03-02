@@ -20,6 +20,35 @@
  * Result: ..fizz
  */
 
+
+ function fizzbuzz(number){
+ 	let result = 0
+ 	let stringOne = ""
+ 	//console.log(number)
+ 	for(let i = 1; i <= number; i++){
+ 		if (i%3 !== 0 && i%5 !== 0 ) {
+ 		stringOne += "."
+ 	}
+ 	if(i%3 === 0 && i%5 !== 0){
+ 		stringOne += "fizz"
+ 	}
+
+ 	if(i%5 === 0 && i%3 !== 0){
+ 		stringOne += "buzz"
+ 	}
+
+ 	if (i%3 === 0 && i%5 === 0) {
+ 		stringOne  += "FizZBuzZ"
+ 	}
+ }
+
+ return stringOne
+ }
+
+
+
+
+
 console.log("[1] Should return '..fizz.buzzfizz..fizzbuzz.fizz..FizZBuzZ..fizz.buzzfizz..fizzbuzz.fizz..FizZBuzZ'");
 console.assert(fizzbuzz(1) === ".")
 console.log("====================================================================================================");

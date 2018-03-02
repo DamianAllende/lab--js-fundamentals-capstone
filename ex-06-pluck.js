@@ -7,7 +7,44 @@
  * e.g:
  * pluck(stooges, 'name') should yield the array, ['moe','larry','curly']
  *
+
+ * 
+ *
+ * Escribe una función pluck () que, dada una lista de objetos, extrae una lista de
+ * los valores asociados con un nombre de propiedad determinado.
+ *
+ * p.ej:
+ * pluck (stooges, 'name') debería producir la matriz, ['moe', 'larry', 'rizado']
+ *
+
+
 **/
+
+
+function pluck(list, pro){
+	//console.log(pro)
+	let result = []
+	let stringOne = ""
+	//console.log(obj.length)
+	for(let i = 0; i < list.length; i++){
+		
+		stringOne = list[i][pro]
+		//console.log(list[i][pro])	
+		result.push(stringOne)
+	}
+	return result
+	//console.log(typeof mex)
+	
+}
+
+
+
+
+
+
+
+
+
 
 
 //*~*~*-*~*~*~*~*~ Don't Touch *~*~*~*~*~*~*~*~*~*~*~
@@ -19,6 +56,11 @@ var stooges = [
    {name: 'shemp', age: 62, hairStyle: "parted"},
    {name: 'joe', age: 47, hairStyle: "bald"}
 ]
+
+
+
+
+
 
 var outputArray_1 = pluck(stooges, 'name')
 var outputArray_2 = pluck(stooges, 'hairStyle')

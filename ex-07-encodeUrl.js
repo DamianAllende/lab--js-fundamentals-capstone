@@ -20,6 +20,38 @@
 *
 **/
 
+function encodeURL(param){
+	let newString = param.split("")
+	for(let i = 0; i < newString.length; i++){
+		if (newString[i] === ' '){
+			newString[i] = '%20'
+			
+		}
+		if(newString[i] === '!'){
+			newString[i] = '%21'
+		}
+
+		if (newString[i] === '"') {
+			newString[i] = '%22'
+		}
+		if (newString[i] === '$') {
+			newString[i] = '%24'
+		}
+		if (newString[i] === '%') {
+			newString[i] = '%25'
+		}
+		if (newString[i] === "'") {
+			newString[i] = '%27'
+		}
+ 
+ 
+ 
+	}
+	return newString.join("")
+}
+
+//console.log(encodeUrl('she said "there is no need for violence!"'))
+
 
 
 
@@ -47,6 +79,6 @@ console.log();
 
 var encodedURL4 = encodeURL("20% of $100")
 console.log("[4] Should return '20%25%20of%20%24100'")
-console.assert(encodedURL3 === "20%25%20of%20%24100")
+console.assert(encodedURL4 === "20%25%20of%20%24100")
 console.log("=================================================================================");
 console.log();

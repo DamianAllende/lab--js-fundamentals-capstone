@@ -8,6 +8,50 @@
  *
 **/
 
+function list(varString, param){
+	let contador  = []
+	for(let i = 0; i < param.length; i++){
+		if(varString === param[i]){
+			 contador.push(param[i]) 
+		}
+	}
+
+	if (contador.length >= 1) {
+		return contador.length
+	}
+
+	
+	
+}
+
+
+function getWordCount(stringOne){
+	let newObj = {}
+	let stringNew = stringOne.toLowerCase().split(" ")
+	//console.log(stringNew)
+	for(let i = 0; i < stringNew.length; i++){
+		//console.log(stringNew[i])	
+
+		//console.log(list(stringNew[i], stringNew))
+		//return list(stringNew[i], stringNew)
+		let contar = list(stringNew[i], stringNew)
+		let propiedad = stringNew[i]
+		//.log(propiedad)
+
+		//console.log(contar)
+
+		newObj[propiedad]= contar
+
+
+	}
+
+return newObj
+	
+}
+
+
+
+
 
 
 
@@ -42,7 +86,7 @@ console.assert( wordFrequencyObject.you === 9 )
 console.log("====================================");
 console.log();
 
-
+/*
 // EXPLORER MODE - PART 2 - Strip the Punctuation
 //-----------------------------
 console.log("[4] Should return 4 for 'needy'");
@@ -59,3 +103,4 @@ console.log("[6] Should return 2 for 'dead'");
 console.assert( wordFrequencyObject.dead === 2)
 console.log("====================================");
 console.log();
+*/

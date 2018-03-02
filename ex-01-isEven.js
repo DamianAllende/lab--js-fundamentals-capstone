@@ -6,6 +6,17 @@
  *
 **/
 
+function isEven (param){
+	let numero = (param % 2)
+	let resultado = false
+	if(numero === 0){
+		resultado =  true
+	}
+
+	return resultado
+}
+
+
 
 
 
